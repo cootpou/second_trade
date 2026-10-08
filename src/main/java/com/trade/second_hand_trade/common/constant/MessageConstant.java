@@ -15,7 +15,7 @@ public class MessageConstant {
     public static final String PRODUCT_NOT_ON_SALE = "商品已下架或已售出";
     public static final String CANNOT_BUY_OWN_PRODUCT = "不能购买自己发布的商品";
 
-    public static final String CANNOT_BUY_OWN_PRODUCT0= "不能购买自己发布的商品";
+    public static final String CANNOT_BUY_OWN_PRODUCT0= "能购买自己发布的商品";
 
     public static final String ORDER_NOT_FOUND = "订单不存在";
     public static final String NOT_ORDER_OWNER = "只能操作自己的订单";
