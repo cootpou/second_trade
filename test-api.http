@@ -1,0 +1,33 @@
+### 1. 分页查询商品（第1页，每页5条，搜索"教材"）
+GET http://127.0.0.1:8080/api/product/page?page=1&pageSize=5&keyword=教材
+
+### 2. 查询商品详情
+GET http://127.0.0.1:8080/api/product/1
+
+### 3. 新增商品
+POST http://127.0.0.1:8080/api/product
+Content-Type: application/json
+
+{
+  "sellerId": 1,
+  "title": "线性代数教材",
+  "description": "同济第六版，有少量笔记",
+  "price": 20.00,
+  "originalPrice": 45.00,
+  "category": "书籍教材",
+  "condition": "八成新",
+  "location": "东区宿舍"
+}
+
+### 4. 更新商品
+PUT http://127.0.0.1:8080/api/product
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "线性代数教材（降价）",
+  "price": 15.00
+}
+
+### 5. 删除商品
+DELETE http://127.0.0.1:8080/api/product/1

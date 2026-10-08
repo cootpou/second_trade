@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trade.second_hand_trade.mapper.FavoriteMapper">
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO favorites(user_id, product_id, created_at)
+        VALUES(#{userId}, #{productId}, #{createdAt})
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM favorites WHERE user_id = #{userId} AND product_id = #{productId}
+    </delete>
+
+    <select id="selectByUserAndProduct" resultType="com.trade.second_hand_trade.entity.Favorite">
+        SELECT * FROM favorites WHERE user_id = #{userId} AND product_id = #{productId}
+    </select>
+
+    <!-- 分页查询我的收藏，联表商品和卖家信息 -->
+    <select id="pageQueryByUser" resultType="com.trade.second_hand_trade.vo.FavoriteVO">
+        SELECT f.*,
+               p.title AS productTitle,
+               p.price AS productPrice,
+               p.image_path AS productImage,
+               p.status AS productStatus,
+               u.username AS sellerName
+        FROM favorites f
+        LEFT JOIN products p ON f.product_id = p.id
+        LEFT JOIN users u ON p.seller_id = u.id
+        WHERE f.user_id = #{userId}
+        ORDER BY f.created_at DESC
+    </select>
+
+</mapper>

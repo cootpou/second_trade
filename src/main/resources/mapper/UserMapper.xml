@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trade.second_hand_trade.mapper.UserMapper">
+
+    <select id="getByUsername" resultType="com.trade.second_hand_trade.entity.User">
+        SELECT * FROM users WHERE username = #{username}
+    </select>
+
+    <select id="getById" resultType="com.trade.second_hand_trade.entity.User">
+        SELECT * FROM users WHERE id = #{id}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO users(username, password_hash, email, phone, student_id, real_name, role, credit_score, balance, status, created_at, verified)
+        VALUES(#{username}, #{passwordHash}, #{email}, #{phone}, #{studentId}, #{realName}, #{role}, #{creditScore}, #{balance}, #{status}, #{createdAt}, #{verified})
+    </insert>
+
+    <update id="update">
+        UPDATE users
+        SET username=#{username}, password_hash=#{passwordHash}, email=#{email},
+            phone=#{phone}, student_id=#{studentId}, real_name=#{realName},
+            role=#{role}, credit_score=#{creditScore}, balance=#{balance},
+            status=#{status}, last_login=#{lastLogin}, verified=#{verified}
+        WHERE id=#{id}
+    </update>
+</mapper>

@@ -1,0 +1,19 @@
+package com.trade.second_hand_trade.common;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.io.Serializable;
+import java.util.List;
+
+/**
+ * 分页查询结果（苍穹外卖同款）
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class PageResult implements Serializable {
+
+    private Long total;          // 总记录数
+    private List records;        // 当前页数据集合
+}

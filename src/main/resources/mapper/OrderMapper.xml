@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trade.second_hand_trade.mapper.OrderMapper">
+
+    <!-- 插入订单 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO orders(product_id, buyer_id, seller_id, price, status,
+                           payment_method, delivery_method, meetup_location, meetup_time, created_at)
+        VALUES(#{productId}, #{buyerId}, #{sellerId}, #{price}, #{status},
+               #{paymentMethod}, #{deliveryMethod}, #{meetupLocation}, #{meetupTime}, #{createdAt})
+    </insert>
+
+    <!-- 根据id查询订单 -->
+    <select id="selectById" resultType="com.trade.second_hand_trade.entity.Order">
+        SELECT * FROM orders WHERE id = #{id}
+    </select>
+
+    <!-- 更新订单状态 -->
+    <update id="updateStatus">
+        UPDATE orders SET status = #{status}
+        <if test="status == 'completed'">
+            , completed_at = NOW()
+        </if>
+        WHERE id = #{id}
+    </update>
+
+    <!-- 买家分页查询自己的订单（联表商品、卖家信息） -->
+    <select id="pageQueryByBuyer" resultType="com.trade.second_hand_trade.vo.OrderVO">
+        SELECT o.*,
+               p.title AS productTitle,
+               p.image_path AS productImage,
+               u_seller.username AS sellerName
+        FROM orders o
+        LEFT JOIN products p ON o.product_id = p.id
+        LEFT JOIN users u_seller ON o.seller_id = u_seller.id
+        WHERE o.buyer_id = #{buyerId}
+        <if test="dto.status != null and dto.status != ''">
+            AND o.status = #{dto.status}
+        </if>
+        ORDER BY o.created_at DESC
+    </select>
+
+    <!-- 卖家分页查询自己的订单（联表商品、买家信息） -->
+    <select id="pageQueryBySeller" resultType="com.trade.second_hand_trade.vo.OrderVO">
+        SELECT o.*,
+               p.title AS productTitle,
+               p.image_path AS productImage,
+               u_buyer.username AS buyerName
+        FROM orders o
+        LEFT JOIN products p ON o.product_id = p.id
+        LEFT JOIN users u_buyer ON o.buyer_id = u_buyer.id
+        WHERE o.seller_id = #{sellerId}
+        <if test="dto.status != null and dto.status != ''">
+            AND o.status = #{dto.status}
+        </if>
+        ORDER BY o.created_at DESC
+    </select>
+
+    <!-- 订单详情（联表商品、买家、卖家） -->
+    <select id="selectDetailById" resultType="com.trade.second_hand_trade.vo.OrderVO">
+        SELECT o.*,
+               p.title AS productTitle,
+               p.image_path AS productImage,
+               u_buyer.username AS buyerName,
+               u_seller.username AS sellerName
+        FROM orders o
+        LEFT JOIN products p ON o.product_id = p.id
+        LEFT JOIN users u_buyer ON o.buyer_id = u_buyer.id
+        LEFT JOIN users u_seller ON o.seller_id = u_seller.id
+        WHERE o.id = #{id}
+    </select>
+
+    <!-- 查询超时未付款的订单 -->
+    <select id="selectTimeoutOrders" resultType="com.trade.second_hand_trade.entity.Order">
+        SELECT * FROM orders
+        WHERE status = 'pending'
+        AND created_at &lt; DATE_SUB(NOW(), INTERVAL #{minutes} MINUTE)
+    </select>
+
+</mapper>

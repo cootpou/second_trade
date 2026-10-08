@@ -1,0 +1,41 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/trading_db?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+  # 关闭 favicon.ico 的默认处理，避免404刷屏
+  mvc:
+    throw-exception-if-no-handler-found: false
+  web:
+    resources:
+      add-mappings: true
+
+# 图片上传本地存储路径
+upload:
+  path: D:/Downloads/second_hand_trade/upload/images/
+  url-prefix: /images/
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.trade.second_hand_trade.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    com.trade.second_hand_trade.mapper: debug
+
+# JWT 配置
+jwt:
+  secret-key: secondhand-trade-jwt-secret-key-2026-very-long
+  ttl: 7200000
+  token-name: token

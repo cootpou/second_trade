@@ -1,0 +1,63 @@
+0 verbose cli C:\Users\ZhuanZ\AppData\Local\Doubao\User Data\sandbox_runtime\bases\9f6d27f23933fb44a3a1c728c88a5ce4\node\node.exe C:\Users\ZhuanZ\AppData\Local\Doubao\User Data\sandbox_runtime\bases\9f6d27f23933fb44a3a1c728c88a5ce4\node\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.2
+2 info using node@v20.20.2
+3 silly config load:file:C:\Users\ZhuanZ\AppData\Local\Doubao\User Data\sandbox_runtime\bases\9f6d27f23933fb44a3a1c728c88a5ce4\node\node_modules\npm\npmrc
+4 silly config load:file:D:\Downloads\second_hand_trade\project-rjwm-admin-vue-ts\.npmrc
+5 silly config load:file:C:\Users\ZhuanZ\AppData\Local\Doubao\User Data\sandbox_runtime\bases\9f6d27f23933fb44a3a1c728c88a5ce4\.npmrc
+6 silly config load:file:C:\Users\ZhuanZ\AppData\Local\Doubao\User Data\sandbox_runtime\bases\9f6d27f23933fb44a3a1c728c88a5ce4\.gnpmrc
+7 verbose title npm install
+8 verbose argv "install" "--no-audit" "--no-fund" "--legacy-peer-deps" "--registry" "https://registry.npmjs.org/" "--cache" "D:\\Downloads\\second_hand_trade\\_npmcache"
+9 verbose logfile logs-max:10 dir:D:\Downloads\second_hand_trade\_npmcache\_logs\2026-10-07T14_29_43_285Z-
+10 verbose logfile D:\Downloads\second_hand_trade\_npmcache\_logs\2026-10-07T14_29_43_285Z-debug-0.log
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest @types/echarts@4.9.13
+15 silly packumentCache full:https://registry.npmjs.org/@types%2fecharts cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/@types%2fecharts 2471ms (cache revalidated)
+17 silly packumentCache full:https://registry.npmjs.org/@types%2fecharts set size:190057 disposed:false
+18 silly fetch manifest @types/webpack@4.41.32
+19 silly packumentCache full:https://registry.npmjs.org/@types%2fwebpack cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/@types%2fwebpack 826ms (cache revalidated)
+21 silly packumentCache full:https://registry.npmjs.org/@types%2fwebpack set size:554247 disposed:false
+22 silly fetch manifest area-data@5.0.6
+23 silly packumentCache full:https://registry.npmjs.org/area-data cache-miss
+24 http fetch GET 200 https://registry.npmjs.org/area-data 823ms (cache revalidated)
+25 silly packumentCache full:https://registry.npmjs.org/area-data set size:28030 disposed:false
+26 silly fetch manifest axios@https://registry.npm.taobao.org/axios/download/axios-0.19.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.0.tgz
+27 silly tarball no local data for axios@https://registry.npm.taobao.org/axios/download/axios-0.19.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.0.tgz. Extracting by manifest.
+28 http fetch GET https://registry.npm.taobao.org/axios/download/axios-0.19.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+29 http fetch GET https://registry.npm.taobao.org/axios/download/axios-0.19.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.0.tgz attempt 2 failed with CERT_HAS_EXPIRED
+30 http fetch GET https://registry.npm.taobao.org/axios/download/axios-0.19.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.0.tgz attempt 3 failed with CERT_HAS_EXPIRED
+31 silly fetch manifest echarts@5.3.2
+32 silly packumentCache full:https://registry.npmjs.org/echarts cache-miss
+33 http fetch GET 200 https://registry.npmjs.org/echarts 241ms (cache revalidated)
+34 silly packumentCache full:https://registry.npmjs.org/echarts set size:442406 disposed:false
+35 silly fetch manifest element-ui@https://registry.npm.taobao.org/element-ui/download/element-ui-2.13.0.tgz
+36 silly tarball no local data for element-ui@https://registry.npm.taobao.org/element-ui/download/element-ui-2.13.0.tgz. Extracting by manifest.
+37 http fetch GET https://registry.npm.taobao.org/element-ui/download/element-ui-2.13.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+38 http fetch GET https://registry.npm.taobao.org/element-ui/download/element-ui-2.13.0.tgz attempt 2 failed with CERT_HAS_EXPIRED
+39 http fetch GET https://registry.npm.taobao.org/element-ui/download/element-ui-2.13.0.tgz attempt 3 failed with CERT_HAS_EXPIRED
+40 silly fetch manifest js-cookie@https://registry.npm.taobao.org/js-cookie/download/js-cookie-2.2.1.tgz
+41 silly tarball no local data for js-cookie@https://registry.npm.taobao.org/js-cookie/download/js-cookie-2.2.1.tgz. Extracting by manifest.
+42 http fetch GET https://registry.npm.taobao.org/js-cookie/download/js-cookie-2.2.1.tgz attempt 1 failed with CERT_HAS_EXPIRED
+43 http fetch GET https://registry.npm.taobao.org/js-cookie/download/js-cookie-2.2.1.tgz attempt 2 failed with CERT_HAS_EXPIRED
+44 http fetch GET https://registry.npm.taobao.org/js-cookie/download/js-cookie-2.2.1.tgz attempt 3 failed with CERT_HAS_EXPIRED
+45 silly fetch manifest md5@^2.3.0
+46 silly packumentCache full:https://registry.npmjs.org/md5 cache-miss
+47 http fetch GET 200 https://registry.npmjs.org/md5 222ms (cache revalidated)
+48 silly packumentCache full:https://registry.npmjs.org/md5 set size:16772 disposed:false
+49 silly fetch manifest moment@https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz
+50 silly tarball no local data for moment@https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz. Extracting by manifest.
+51 http fetch GET https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+52 http fetch GET https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz attempt 2 failed with CERT_HAS_EXPIRED
+53 http fetch GET https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz attempt 3 failed with CERT_HAS_EXPIRED
+54 silly fetch manifest normalize.css@https://registry.npm.taobao.org/normalize.css/download/normalize.css-8.0.1.tgz
+55 silly tarball no local data for normalize.css@https://registry.npm.taobao.org/normalize.css/download/normalize.css-8.0.1.tgz. Extracting by manifest.
+56 http fetch GET https://registry.npm.taobao.org/normalize.css/download/normalize.css-8.0.1.tgz attempt 1 failed with CERT_HAS_EXPIRED
+57 http fetch GET https://registry.npm.taobao.org/normalize.css/download/normalize.css-8.0.1.tgz attempt 2 failed with CERT_HAS_EXPIRED
+58 http fetch GET https://registry.npm.taobao.org/normalize.css/download/normalize.css-8.0.1.tgz attempt 3 failed with CERT_HAS_EXPIRED
+59 silly fetch manifest nprogress@https://registry.npm.taobao.org/nprogress/download/nprogress-0.2.0.tgz
+60 silly tarball no local data for nprogress@https://registry.npm.taobao.org/nprogress/download/nprogress-0.2.0.tgz. Extracting by manifest.
+61 http fetch GET https://registry.npm.taobao.org/nprogress/download/nprogress-0.2.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+62 http fetch GET https://registry.npm.taobao.org/nprogress/download/nprogress-0.2.0.tgz attempt 2 failed with CERT_HAS_EXPIRED

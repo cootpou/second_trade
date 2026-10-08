@@ -1,0 +1,897 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.8)
+
+2026-10-07T23:36:10.279+08:00  INFO 25148 --- [           main] c.t.s.SecondHandTradeApplication         : Starting SecondHandTradeApplication v0.0.1-SNAPSHOT using Java 25.0.2 with PID 25148 (D:\Downloads\second_hand_trade\target\second_hand_trade-0.0.1-SNAPSHOT.jar started by ZhuanZï¼ˆæ— å¯†ç ï¼‰ in D:\Downloads\second_hand_trade)
+2026-10-07T23:36:10.289+08:00  INFO 25148 --- [           main] c.t.s.SecondHandTradeApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-07T23:36:11.816+08:00  INFO 25148 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-07T23:36:11.832+08:00  INFO 25148 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-07T23:36:11.833+08:00  INFO 25148 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-07T23:36:11.886+08:00  INFO 25148 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1513 ms
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+
+
+,------.                           ,--.  ,--.         ,--.                         
+|  .--. '  ,--,--.  ,---.   ,---.  |  '--'  |  ,---.  |  |  ,---.   ,---.  ,--.--. 
+|  '--' | ' ,-.  | | .-. | | .-. : |  .--.  | | .-. : |  | | .-. | | .-. : |  .--' 
+|  | --'  \ '-'  | ' '-' ' \   --. |  |  |  | \   --. |  | | '-' ' \   --. |  |    
+`--'       `--`--' .`-  /   `----' `--'  `--'  `----' `--' |  |-'   `----' `--'    
+                   `---'                                   `--'                        is intercepting.
+
+2026-10-07T23:36:13.102+08:00  INFO 25148 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-07T23:36:13.128+08:00  INFO 25148 --- [           main] c.t.s.SecondHandTradeApplication         : Started SecondHandTradeApplication in 3.497 seconds (process running for 4.213)
+2026-10-07T23:36:24.246+08:00  INFO 25148 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-07T23:36:24.246+08:00  INFO 25148 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-07T23:36:24.247+08:00  INFO 25148 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-07T23:36:44.183+08:00  INFO 25148 --- [nio-8080-exec-2] c.t.s.controller.UserController          : ç”¨æˆ·ç™»å½•ï¼šzhangsan
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53173df6] was not registered for synchronization because synchronization is not active
+2026-10-07T23:36:44.211+08:00  INFO 25148 --- [nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-07T23:36:44.620+08:00  INFO 25148 --- [nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc
+2026-10-07T23:36:44.623+08:00  INFO 25148 --- [nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+JDBC Connection [HikariProxyConnection@1235106280 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM users WHERE username = ?
+==> Parameters: zhangsan(String)
+<==    Columns: id, username, password_hash, email, phone, student_id, real_name, role, credit_score, balance, status, created_at, last_login, verified
+<==        Row: 2, zhangsan, $2a$10$i3O.rwMDnzN.7OI0owfzE.kaouN1bgza79Ao2h3gET/F2Rmk6zOKm, zhangsan@example.com, 13900139000, 2024001, ÕÅÈı, student, 100, 0.00, active, 2026-09-04 12:31:06, 2026-10-07 23:35:30, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53173df6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f61be1d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@777100061 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: UPDATE users SET username=?, password_hash=?, email=?, phone=?, student_id=?, real_name=?, role=?, credit_score=?, balance=?, status=?, last_login=?, verified=? WHERE id=?
+==> Parameters: zhangsan(String), $2a$10$i3O.rwMDnzN.7OI0owfzE.kaouN1bgza79Ao2h3gET/F2Rmk6zOKm(String), zhangsan@example.com(String), 13900139000(String), 2024001(String), ÕÅÈı(String), student(String), 100(Integer), 0.00(BigDecimal), active(String), 2026-10-07T23:36:44.852182200(LocalDateTime), 0(Integer), 2(Integer)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f61be1d]
+2026-10-07T23:36:45.289+08:00  INFO 25148 --- [nio-8080-exec-4] c.t.s.controller.UserController          : ç”¨æˆ·ç™»å½•ï¼šlisi
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38f2dede] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@909457328 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM users WHERE username = ?
+==> Parameters: lisi(String)
+<==    Columns: id, username, password_hash, email, phone, student_id, real_name, role, credit_score, balance, status, created_at, last_login, verified
+<==        Row: 3, lisi, $2a$10$uWDwGsSauTl1veqREAkyYucMlH6lPvj9Dy5slRJHbT3lCVsCZDVsm, lisi@example.com, 13700137000, 2024002, ÀîËÄ, student, 100, 0.00, active, 2026-09-04 18:51:16, 2026-10-07 23:35:31, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38f2dede]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77083d8b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1495407002 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: UPDATE users SET username=?, password_hash=?, email=?, phone=?, student_id=?, real_name=?, role=?, credit_score=?, balance=?, status=?, last_login=?, verified=? WHERE id=?
+==> Parameters: lisi(String), $2a$10$uWDwGsSauTl1veqREAkyYucMlH6lPvj9Dy5slRJHbT3lCVsCZDVsm(String), lisi@example.com(String), 13700137000(String), 2024002(String), ÀîËÄ(String), student(String), 100(Integer), 0.00(BigDecimal), active(String), 2026-10-07T23:36:45.392075300(LocalDateTime), 0(Integer), 3(Integer)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77083d8b]
+2026-10-07T23:36:45.456+08:00  INFO 25148 --- [nio-8080-exec-3] c.t.s.controller.ProductController       : å•†å“åˆ†é¡µæŸ¥è¯¢ï¼šProductPageQueryDTO(page=1, pageSize=5, category=null, status=active, keyword=null)
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d681593] was not registered for synchronization because synchronization is not active
+Cache Hit Ratio [SQL_CACHE]: 0.0
+JDBC Connection [HikariProxyConnection@1761456365 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT count(0) FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.status = ?
+==> Parameters: active(String)
+<==    Columns: count(0)
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT p.*, u.username as sellerName FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.status = ? ORDER BY p.created_at DESC LIMIT ?
+==> Parameters: active(String), 5(Integer)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at, sellerName
+<==        Row: 7, 2, iPhone 13 ¶şÊÖ, <<BLOB>>, 2500.00, 5999.00, ÊıÂëµç×Ó, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, 0, 0, 2026-09-04 18:20:02, 2026-09-04 18:20:02, null, zhangsan
+<==        Row: 4, 1, C++ Primer µÚÎå°æ, <<BLOB>>, 45.00, 128.00, Êé¼®½Ì²Ä, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, null, 0, 0, 2026-09-04 13:21:44, 2026-09-04 13:21:44, null, testuser
+<==        Row: 3, null, ²âÊÔÉÌÆ·-ĞèÒªµÇÂ¼, <<BLOB>>, 10.00, null, ²âÊÔ, È«ĞÂ, active, ²âÊÔµØµã, null, 0, 0, 2026-09-04 13:20:09, 2026-09-04 13:20:09, null, null
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d681593]
+2026-10-07T23:36:45.714+08:00  INFO 25148 --- [nio-8080-exec-5] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImV4cCI6MTc5MTM5NDYwNH0.eg7bb63pF0ygfhdvU1AuCJTshap10tI7MtjDgmIga3A
+2026-10-07T23:36:45.787+08:00  INFO 25148 --- [nio-8080-exec-5] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š2
+2026-10-07T23:36:45.790+08:00  INFO 25148 --- [nio-8080-exec-5] c.t.s.controller.ProductController       : æŸ¥è¯¢æˆ‘çš„å•†å“
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@278455e5] was not registered for synchronization because synchronization is not active
+Cache Hit Ratio [SQL_CACHE]: 0.0
+JDBC Connection [HikariProxyConnection@991480540 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT count(0) FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.seller_id = ?
+==> Parameters: 2(Integer)
+<==    Columns: count(0)
+<==        Row: 4
+<==      Total: 1
+==>  Preparing: SELECT p.*, u.username as sellerName FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.seller_id = ? ORDER BY p.created_at DESC LIMIT ?
+==> Parameters: 2(Integer), 50(Integer)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at, sellerName
+<==        Row: 8, 2, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, <<BLOB>>, 35.00, 89.00, Éú»îÓÃÆ·, ¾Å³ÉĞÂ, sold, Í¼Êé¹İÒ»Â¥, null, 0, 0, 2026-10-07 23:35:31, 2026-10-07 23:35:31, null, zhangsan
+<==        Row: 7, 2, iPhone 13 ¶şÊÖ, <<BLOB>>, 2500.00, 5999.00, ÊıÂëµç×Ó, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, 0, 0, 2026-09-04 18:20:02, 2026-09-04 18:20:02, null, zhangsan
+<==        Row: 6, 2, iPhone 13 ¶şÊÖ, <<BLOB>>, 2500.00, 5999.00, ÊıÂëµç×Ó, ¾Å³ÉĞÂ, sold, ±±ÇøËŞÉá, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, 0, 0, 2026-09-04 18:08:01, 2026-09-04 19:54:13, null, zhangsan
+<==        Row: 5, 2, iPhone 13 ¶şÊÖ, <<BLOB>>, 2500.00, 5999.00, ÊıÂëµç×Ó, ¾Å³ÉĞÂ, offline, ±±ÇøËŞÉá, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, 0, 0, 2026-09-04 18:04:21, 2026-09-04 18:49:58, null, zhangsan
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@278455e5]
+2026-10-07T23:36:45.914+08:00  INFO 25148 --- [nio-8080-exec-8] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImV4cCI6MTc5MTM5NDYwNH0.eg7bb63pF0ygfhdvU1AuCJTshap10tI7MtjDgmIga3A
+2026-10-07T23:36:45.916+08:00  INFO 25148 --- [nio-8080-exec-8] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š2
+2026-10-07T23:36:45.923+08:00  INFO 25148 --- [nio-8080-exec-8] c.t.s.controller.ProductController       : å•†å“ä¸Šä¸‹æ¶ï¼šid=8, status=active
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b8445fd] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@952068626 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: select * from products where id = ?
+==> Parameters: 8(Integer)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at
+<==        Row: 8, 2, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, <<BLOB>>, 35.00, 89.00, Éú»îÓÃÆ·, ¾Å³ÉĞÂ, sold, Í¼Êé¹İÒ»Â¥, null, 0, 0, 2026-10-07 23:35:31, 2026-10-07 23:35:31, null
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b8445fd]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7589456b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1022057866 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: UPDATE products SET status = ?, updated_at = NOW() WHERE id = ?
+==> Parameters: active(String), 8(Integer)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7589456b]
+2026-10-07T23:36:45.968+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImV4cCI6MTc5MTM5NDYwNH0.eg7bb63pF0ygfhdvU1AuCJTshap10tI7MtjDgmIga3A
+2026-10-07T23:36:45.970+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š2
+2026-10-07T23:36:45.971+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.controller.ProductController       : æŸ¥è¯¢æˆ‘çš„å•†å“
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74f6221d] was not registered for synchronization because synchronization is not active
+Cache Hit Ratio [SQL_CACHE]: 0.3333333333333333
+JDBC Connection [HikariProxyConnection@2125456254 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT count(0) FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.seller_id = ? AND p.status = ?
+==> Parameters: 2(Integer), active(String)
+<==    Columns: count(0)
+<==        Row: 2
+<==      Total: 1
+==>  Preparing: SELECT p.*, u.username as sellerName FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.seller_id = ? AND p.status = ? ORDER BY p.created_at DESC LIMIT ?
+==> Parameters: 2(Integer), active(String), 5(Integer)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at, sellerName
+<==        Row: 8, 2, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, <<BLOB>>, 35.00, 89.00, Éú»îÓÃÆ·, ¾Å³ÉĞÂ, active, Í¼Êé¹İÒ»Â¥, null, 0, 0, 2026-10-07 23:35:31, 2026-10-07 23:36:45, null, zhangsan
+<==        Row: 7, 2, iPhone 13 ¶şÊÖ, <<BLOB>>, 2500.00, 5999.00, ÊıÂëµç×Ó, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, 0, 0, 2026-09-04 18:20:02, 2026-09-04 18:20:02, null, zhangsan
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74f6221d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54ccdf8f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1510685542 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: select * from products where id = ?
+==> Parameters: 8(Integer)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at
+<==        Row: 8, 2, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, <<BLOB>>, 35.00, 89.00, Éú»îÓÃÆ·, ¾Å³ÉĞÂ, active, Í¼Êé¹İÒ»Â¥, null, 0, 0, 2026-10-07 23:35:31, 2026-10-07 23:36:45, null
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54ccdf8f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4dfd4b9c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@578738691 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM users WHERE id = ?
+==> Parameters: 2(Integer)
+<==    Columns: id, username, password_hash, email, phone, student_id, real_name, role, credit_score, balance, status, created_at, last_login, verified
+<==        Row: 2, zhangsan, $2a$10$i3O.rwMDnzN.7OI0owfzE.kaouN1bgza79Ao2h3gET/F2Rmk6zOKm, zhangsan@example.com, 13900139000, 2024001, ÕÅÈı, student, 100, 0.00, active, 2026-09-04 12:31:06, 2026-10-07 23:36:45, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4dfd4b9c]
+2026-10-07T23:36:46.085+08:00  INFO 25148 --- [io-8080-exec-10] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.086+08:00  INFO 25148 --- [io-8080-exec-10] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+2026-10-07T23:36:46.087+08:00  INFO 25148 --- [io-8080-exec-10] c.t.s.controller.FavoriteController      : æ”¶è—å•†å“ï¼šproductId=8
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33aef04f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1030293578 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: select * from products where id = ?
+==> Parameters: 8(Integer)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at
+<==        Row: 8, 2, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, <<BLOB>>, 35.00, 89.00, Éú»îÓÃÆ·, ¾Å³ÉĞÂ, active, Í¼Êé¹İÒ»Â¥, null, 0, 0, 2026-10-07 23:35:31, 2026-10-07 23:36:45, null
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33aef04f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c540271] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@943503676 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM favorites WHERE user_id = ? AND product_id = ?
+==> Parameters: 3(Integer), 8(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c540271]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@406038c9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@477887806 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: INSERT INTO favorites(user_id, product_id, created_at) VALUES(?, ?, ?)
+==> Parameters: 3(Integer), 8(Integer), 2026-10-07T23:36:46.095497700(LocalDateTime)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@406038c9]
+2026-10-07T23:36:46.163+08:00  INFO 25148 --- [nio-8080-exec-1] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.165+08:00  INFO 25148 --- [nio-8080-exec-1] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68e339f6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@444097740 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM favorites WHERE user_id = ? AND product_id = ?
+==> Parameters: 3(Integer), 8(Integer)
+<==    Columns: id, user_id, product_id, created_at
+<==        Row: 2, 3, 8, 2026-10-07 23:36:46
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68e339f6]
+2026-10-07T23:36:46.188+08:00  INFO 25148 --- [nio-8080-exec-2] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.191+08:00  INFO 25148 --- [nio-8080-exec-2] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bb617eb] was not registered for synchronization because synchronization is not active
+Cache Hit Ratio [SQL_CACHE]: 0.25
+JDBC Connection [HikariProxyConnection@574878626 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT count(0) FROM favorites f LEFT JOIN products p ON f.product_id = p.id LEFT JOIN users u ON p.seller_id = u.id WHERE f.user_id = ?
+==> Parameters: 3(Integer)
+<==    Columns: count(0)
+<==        Row: 1
+<==      Total: 1
+==>  Preparing: SELECT f.*, p.title AS productTitle, p.price AS productPrice, p.image_path AS productImage, p.status AS productStatus, u.username AS sellerName FROM favorites f LEFT JOIN products p ON f.product_id = p.id LEFT JOIN users u ON p.seller_id = u.id WHERE f.user_id = ? ORDER BY f.created_at DESC LIMIT ?
+==> Parameters: 3(Integer), 5(Integer)
+<==    Columns: id, user_id, product_id, created_at, productTitle, productPrice, productImage, productStatus, sellerName
+<==        Row: 2, 3, 8, 2026-10-07 23:36:46, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, 35.00, null, active, zhangsan
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bb617eb]
+2026-10-07T23:36:46.225+08:00  INFO 25148 --- [nio-8080-exec-4] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.226+08:00  INFO 25148 --- [nio-8080-exec-4] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+2026-10-07T23:36:46.227+08:00  INFO 25148 --- [nio-8080-exec-4] c.t.s.controller.FavoriteController      : å–æ¶ˆæ”¶è—ï¼šproductId=8
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21f55714] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@388481732 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: DELETE FROM favorites WHERE user_id = ? AND product_id = ?
+==> Parameters: 3(Integer), 8(Integer)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21f55714]
+2026-10-07T23:36:46.264+08:00  INFO 25148 --- [nio-8080-exec-3] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.265+08:00  INFO 25148 --- [nio-8080-exec-3] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+2026-10-07T23:36:46.286+08:00  INFO 25148 --- [nio-8080-exec-3] c.t.s.controller.OrderController         : ä¸‹å•ï¼šproductId=8
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ee21a62]
+JDBC Connection [HikariProxyConnection@902409388 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will be managed by Spring
+==>  Preparing: select * from products where id = ?
+==> Parameters: 8(Integer)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at
+<==        Row: 8, 2, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, <<BLOB>>, 35.00, 89.00, Éú»îÓÃÆ·, ¾Å³ÉĞÂ, active, Í¼Êé¹İÒ»Â¥, null, 0, 0, 2026-10-07 23:35:31, 2026-10-07 23:36:45, null
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ee21a62]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ee21a62] from current transaction
+==>  Preparing: INSERT INTO orders(product_id, buyer_id, seller_id, price, status, payment_method, delivery_method, meetup_location, meetup_time, created_at) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+==> Parameters: 8(Integer), 3(Integer), 2(Integer), 35.00(BigDecimal), pending(String), Î¢ĞÅÖ§¸¶(String), µ±Ãæ½»Ò×(String), Í¼Êé¹İÒ»Â¥(String), 2026-10-08T12:00(LocalDateTime), 2026-10-07T23:36:46.310543100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ee21a62]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ee21a62] from current transaction
+==>  Preparing: UPDATE products SET status = ?, updated_at = NOW() WHERE id = ?
+==> Parameters: sold(String), 8(Integer)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ee21a62]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ee21a62]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ee21a62]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ee21a62]
+2026-10-07T23:36:46.407+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.408+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+2026-10-07T23:36:46.411+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.controller.OrderController         : ä¹°å®¶æŸ¥è¯¢è®¢å•
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d2f0085] was not registered for synchronization because synchronization is not active
+Cache Hit Ratio [SQL_CACHE]: 0.2
+JDBC Connection [HikariProxyConnection@870902096 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT count(0) FROM orders o LEFT JOIN products p ON o.product_id = p.id LEFT JOIN users u_seller ON o.seller_id = u_seller.id WHERE o.buyer_id = ?
+==> Parameters: 3(Integer)
+<==    Columns: count(0)
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT o.*, p.title AS productTitle, p.image_path AS productImage, u_seller.username AS sellerName FROM orders o LEFT JOIN products p ON o.product_id = p.id LEFT JOIN users u_seller ON o.seller_id = u_seller.id WHERE o.buyer_id = ? ORDER BY o.created_at DESC LIMIT ?
+==> Parameters: 3(Integer), 5(Integer)
+<==    Columns: id, product_id, buyer_id, seller_id, price, status, payment_method, delivery_method, meetup_location, meetup_time, created_at, completed_at, productTitle, productImage, sellerName
+<==        Row: 3, 8, 3, 2, 35.00, pending, Î¢ĞÅÖ§¸¶, µ±Ãæ½»Ò×, Í¼Êé¹İÒ»Â¥, 2026-10-08 12:00:00, 2026-10-07 23:36:46, null, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, null, zhangsan
+<==        Row: 2, 8, 3, 2, 35.00, completed, Î¢ĞÅÖ§¸¶, µ±Ãæ½»Ò×, Í¼Êé¹İÒ»Â¥, 2026-10-08 12:00:00, 2026-10-07 23:35:32, 2026-10-07 23:35:31, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, null, zhangsan
+<==        Row: 1, 6, 3, 2, 2500.00, completed, Î¢ĞÅ, Ãæ½», ¶«ÇøÊ³ÌÃÃÅ¿Ú, 2026-09-05 14:00:00, 2026-09-04 19:54:13, 2026-09-04 19:59:03, iPhone 13 ¶şÊÖ, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, zhangsan
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d2f0085]
+2026-10-07T23:36:46.479+08:00  INFO 25148 --- [nio-8080-exec-5] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.481+08:00  INFO 25148 --- [nio-8080-exec-5] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+2026-10-07T23:36:46.482+08:00  INFO 25148 --- [nio-8080-exec-5] c.t.s.controller.OrderController         : ä»˜æ¬¾ï¼šid=3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2caf4835] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1369188694 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE id = ?
+==> Parameters: 3(Integer)
+<==    Columns: id, product_id, buyer_id, seller_id, price, status, payment_method, delivery_method, meetup_location, meetup_time, created_at, completed_at
+<==        Row: 3, 8, 3, 2, 35.00, pending, Î¢ĞÅÖ§¸¶, µ±Ãæ½»Ò×, Í¼Êé¹İÒ»Â¥, 2026-10-08 12:00:00, 2026-10-07 23:36:46, null
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2caf4835]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@183186bf] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1620468970 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: UPDATE orders SET status = ? WHERE id = ?
+==> Parameters: paid(String), 3(Integer)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@183186bf]
+2026-10-07T23:36:46.555+08:00  INFO 25148 --- [nio-8080-exec-8] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImV4cCI6MTc5MTM5NDYwNH0.eg7bb63pF0ygfhdvU1AuCJTshap10tI7MtjDgmIga3A
+2026-10-07T23:36:46.556+08:00  INFO 25148 --- [nio-8080-exec-8] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š2
+2026-10-07T23:36:46.559+08:00  INFO 25148 --- [nio-8080-exec-8] c.t.s.controller.OrderController         : å–å®¶æŸ¥è¯¢è®¢å•
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e5376fb] was not registered for synchronization because synchronization is not active
+Cache Hit Ratio [SQL_CACHE]: 0.16666666666666666
+JDBC Connection [HikariProxyConnection@21945927 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT count(0) FROM orders o LEFT JOIN products p ON o.product_id = p.id LEFT JOIN users u_buyer ON o.buyer_id = u_buyer.id WHERE o.seller_id = ?
+==> Parameters: 2(Integer)
+<==    Columns: count(0)
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT o.*, p.title AS productTitle, p.image_path AS productImage, u_buyer.username AS buyerName FROM orders o LEFT JOIN products p ON o.product_id = p.id LEFT JOIN users u_buyer ON o.buyer_id = u_buyer.id WHERE o.seller_id = ? ORDER BY o.created_at DESC LIMIT ?
+==> Parameters: 2(Integer), 5(Integer)
+<==    Columns: id, product_id, buyer_id, seller_id, price, status, payment_method, delivery_method, meetup_location, meetup_time, created_at, completed_at, productTitle, productImage, buyerName
+<==        Row: 3, 8, 3, 2, 35.00, paid, Î¢ĞÅÖ§¸¶, µ±Ãæ½»Ò×, Í¼Êé¹İÒ»Â¥, 2026-10-08 12:00:00, 2026-10-07 23:36:46, null, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, null, lisi
+<==        Row: 2, 8, 3, 2, 35.00, completed, Î¢ĞÅÖ§¸¶, µ±Ãæ½»Ò×, Í¼Êé¹İÒ»Â¥, 2026-10-08 12:00:00, 2026-10-07 23:35:32, 2026-10-07 23:35:31, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, null, lisi
+<==        Row: 1, 6, 3, 2, 2500.00, completed, Î¢ĞÅ, Ãæ½», ¶«ÇøÊ³ÌÃÃÅ¿Ú, 2026-09-05 14:00:00, 2026-09-04 19:54:13, 2026-09-04 19:59:03, iPhone 13 ¶şÊÖ, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, lisi
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e5376fb]
+2026-10-07T23:36:46.613+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImV4cCI6MTc5MTM5NDYwNH0.eg7bb63pF0ygfhdvU1AuCJTshap10tI7MtjDgmIga3A
+2026-10-07T23:36:46.616+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š2
+2026-10-07T23:36:46.617+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.controller.OrderController         : å®Œæˆè®¢å•ï¼šid=3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b233787] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1519815566 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE id = ?
+==> Parameters: 3(Integer)
+<==    Columns: id, product_id, buyer_id, seller_id, price, status, payment_method, delivery_method, meetup_location, meetup_time, created_at, completed_at
+<==        Row: 3, 8, 3, 2, 35.00, paid, Î¢ĞÅÖ§¸¶, µ±Ãæ½»Ò×, Í¼Êé¹İÒ»Â¥, 2026-10-08 12:00:00, 2026-10-07 23:36:46, null
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b233787]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d300b33] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1601013789 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: UPDATE orders SET status = ? , completed_at = NOW() WHERE id = ?
+==> Parameters: completed(String), 3(Integer)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d300b33]
+2026-10-07T23:36:46.660+08:00  INFO 25148 --- [nio-8080-exec-7] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.661+08:00  INFO 25148 --- [nio-8080-exec-7] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6dfc20a2] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1257912106 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT o.*, p.title AS productTitle, p.image_path AS productImage, u_buyer.username AS buyerName, u_seller.username AS sellerName FROM orders o LEFT JOIN products p ON o.product_id = p.id LEFT JOIN users u_buyer ON o.buyer_id = u_buyer.id LEFT JOIN users u_seller ON o.seller_id = u_seller.id WHERE o.id = ?
+==> Parameters: 3(Integer)
+<==    Columns: id, product_id, buyer_id, seller_id, price, status, payment_method, delivery_method, meetup_location, meetup_time, created_at, completed_at, productTitle, productImage, buyerName, sellerName
+<==        Row: 3, 8, 3, 2, 35.00, completed, Î¢ĞÅÖ§¸¶, µ±Ãæ½»Ò×, Í¼Êé¹İÒ»Â¥, 2026-10-08 12:00:00, 2026-10-07 23:36:46, 2026-10-07 23:36:46, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, null, lisi, zhangsan
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6dfc20a2]
+2026-10-07T23:36:46.699+08:00  INFO 25148 --- [io-8080-exec-10] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.700+08:00  INFO 25148 --- [io-8080-exec-10] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+2026-10-07T23:36:46.702+08:00  INFO 25148 --- [io-8080-exec-10] c.t.s.controller.MessageController       : å‘é€æ¶ˆæ¯ï¼što=2, content=ä½ å¥½ï¼Œå°ç¯è¿˜åœ¨å—ï¼Ÿ
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6431bcc2]
+JDBC Connection [HikariProxyConnection@771656622 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will be managed by Spring
+==>  Preparing: INSERT INTO messages(sender_id, receiver_id, product_id, content, message_type, is_read, created_at) VALUES(?, ?, ?, ?, ?, ?, ?)
+==> Parameters: 3(Integer), 2(Integer), 8(Integer), ÄãºÃ£¬Ì¨µÆ»¹ÔÚÂğ£¿(String), text(String), 0(Integer), 2026-10-07T23:36:46.703032800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6431bcc2]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6431bcc2] from current transaction
+==>  Preparing: SELECT * FROM conversations WHERE ( (user1_id = ? AND user2_id = ?) OR (user1_id = ? AND user2_id = ?) ) AND product_id = ? LIMIT 1
+==> Parameters: 2(Integer), 3(Integer), 3(Integer), 2(Integer), 8(Integer)
+<==    Columns: id, user1_id, user2_id, product_id, last_message_id, last_message_time
+<==        Row: 1, 2, 3, 8, 2, 2026-10-07 23:35:32
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6431bcc2]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6431bcc2] from current transaction
+==>  Preparing: UPDATE conversations SET last_message_id = ?, last_message_time = ? WHERE id = ?
+==> Parameters: 3(Integer), 2026-10-07T23:36:46.703032800(LocalDateTime), 1(Integer)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6431bcc2]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6431bcc2]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6431bcc2]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6431bcc2]
+2026-10-07T23:36:46.745+08:00  INFO 25148 --- [nio-8080-exec-1] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImV4cCI6MTc5MTM5NDYwNH0.eg7bb63pF0ygfhdvU1AuCJTshap10tI7MtjDgmIga3A
+2026-10-07T23:36:46.746+08:00  INFO 25148 --- [nio-8080-exec-1] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š2
+2026-10-07T23:36:46.747+08:00  INFO 25148 --- [nio-8080-exec-1] c.t.s.controller.MessageController       : å‘é€æ¶ˆæ¯ï¼što=3, content=åœ¨çš„ï¼Œæ˜å¤©ä¸­åˆå›¾ä¹¦é¦†ä¸€æ¥¼é¢äº¤å¯ä»¥å—ï¼Ÿ
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@94577a4]
+JDBC Connection [HikariProxyConnection@555714104 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will be managed by Spring
+==>  Preparing: INSERT INTO messages(sender_id, receiver_id, product_id, content, message_type, is_read, created_at) VALUES(?, ?, ?, ?, ?, ?, ?)
+==> Parameters: 2(Integer), 3(Integer), 8(Integer), ÔÚµÄ£¬Ã÷ÌìÖĞÎçÍ¼Êé¹İÒ»Â¥Ãæ½»¿ÉÒÔÂğ£¿(String), text(String), 0(Integer), 2026-10-07T23:36:46.749885900(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@94577a4]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@94577a4] from current transaction
+==>  Preparing: SELECT * FROM conversations WHERE ( (user1_id = ? AND user2_id = ?) OR (user1_id = ? AND user2_id = ?) ) AND product_id = ? LIMIT 1
+==> Parameters: 2(Integer), 3(Integer), 3(Integer), 2(Integer), 8(Integer)
+<==    Columns: id, user1_id, user2_id, product_id, last_message_id, last_message_time
+<==        Row: 1, 2, 3, 8, 3, 2026-10-07 23:36:47
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@94577a4]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@94577a4] from current transaction
+==>  Preparing: UPDATE conversations SET last_message_id = ?, last_message_time = ? WHERE id = ?
+==> Parameters: 4(Integer), 2026-10-07T23:36:46.749885900(LocalDateTime), 1(Integer)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@94577a4]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@94577a4]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@94577a4]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@94577a4]
+2026-10-07T23:36:46.790+08:00  INFO 25148 --- [nio-8080-exec-2] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.791+08:00  INFO 25148 --- [nio-8080-exec-2] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5db3a1ea] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1624282909 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT c.*, CASE WHEN c.user1_id = ? THEN u2.username ELSE u1.username END AS otherUserName, m.content AS lastMessageContent, p.title AS productTitle FROM conversations c LEFT JOIN users u1 ON c.user1_id = u1.id LEFT JOIN users u2 ON c.user2_id = u2.id LEFT JOIN messages m ON c.last_message_id = m.id LEFT JOIN products p ON c.product_id = p.id WHERE c.user1_id = ? OR c.user2_id = ? ORDER BY c.last_message_time DESC
+==> Parameters: 3(Integer), 3(Integer), 3(Integer)
+<==    Columns: id, user1_id, user2_id, product_id, last_message_id, last_message_time, otherUserName, lastMessageContent, productTitle
+<==        Row: 1, 2, 3, 8, 4, 2026-10-07 23:36:47, zhangsan, <<BLOB>>, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5db3a1ea]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5947c2db] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@423335144 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND sender_id = ? AND product_id = ? AND is_read = 0
+==> Parameters: 3(Integer), 2(Integer), 8(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5947c2db]
+2026-10-07T23:36:46.824+08:00  INFO 25148 --- [nio-8080-exec-4] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.825+08:00  INFO 25148 --- [nio-8080-exec-4] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e6c5efd] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1058000484 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e6c5efd]
+2026-10-07T23:36:46.843+08:00  INFO 25148 --- [nio-8080-exec-3] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.844+08:00  INFO 25148 --- [nio-8080-exec-3] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69e8969e]
+JDBC Connection [HikariProxyConnection@1648965509 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will be managed by Spring
+==>  Preparing: UPDATE messages SET is_read = 1 WHERE sender_id = ? AND receiver_id = ? AND product_id = ? AND is_read = 0
+==> Parameters: 2(Integer), 3(Integer), 8(Integer)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69e8969e]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69e8969e] from current transaction
+==>  Preparing: SELECT m.*, u_sender.username AS senderName, u_receiver.username AS receiverName FROM messages m LEFT JOIN users u_sender ON m.sender_id = u_sender.id LEFT JOIN users u_receiver ON m.receiver_id = u_receiver.id WHERE ( (m.sender_id = ? AND m.receiver_id = ?) OR (m.sender_id = ? AND m.receiver_id = ?) ) AND m.product_id = ? ORDER BY m.created_at ASC
+==> Parameters: 3(Integer), 2(Integer), 2(Integer), 3(Integer), 8(Integer)
+<==    Columns: id, sender_id, receiver_id, product_id, content, message_type, is_read, created_at, senderName, receiverName
+<==        Row: 1, 3, 2, 8, <<BLOB>>, text, 0, 2026-10-07 23:35:32, lisi, zhangsan
+<==        Row: 2, 2, 3, 8, <<BLOB>>, text, 1, 2026-10-07 23:35:32, zhangsan, lisi
+<==        Row: 3, 3, 2, 8, <<BLOB>>, text, 0, 2026-10-07 23:36:47, lisi, zhangsan
+<==        Row: 4, 2, 3, 8, <<BLOB>>, text, 1, 2026-10-07 23:36:47, zhangsan, lisi
+<==      Total: 4
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69e8969e]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69e8969e]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69e8969e]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69e8969e]
+2026-10-07T23:36:46.897+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYwNX0.1JBA0f5VaG1AibQhmfRVhbM3MKwqvRFsHo_PJuRX5Ts
+2026-10-07T23:36:46.898+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+2026-10-07T23:36:46.898+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.controller.UserController          : è·å–å½“å‰ç”¨æˆ·ä¿¡æ¯ï¼Œidï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@373bee9c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1139618626 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM users WHERE id = ?
+==> Parameters: 3(Integer)
+<==    Columns: id, username, password_hash, email, phone, student_id, real_name, role, credit_score, balance, status, created_at, last_login, verified
+<==        Row: 3, lisi, $2a$10$uWDwGsSauTl1veqREAkyYucMlH6lPvj9Dy5slRJHbT3lCVsCZDVsm, lisi@example.com, 13700137000, 2024002, ÀîËÄ, student, 100, 0.00, active, 2026-09-04 18:51:16, 2026-10-07 23:36:45, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@373bee9c]
+2026-10-07T23:36:56.674+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.controller.ProductController       : å•†å“åˆ†é¡µæŸ¥è¯¢ï¼šProductPageQueryDTO(page=1, pageSize=12, category=null, status=active, keyword=null)
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@627dceff] was not registered for synchronization because synchronization is not active
+Cache Hit Ratio [SQL_CACHE]: 0.2857142857142857
+JDBC Connection [HikariProxyConnection@2131306512 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT count(0) FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.status = ?
+==> Parameters: active(String)
+<==    Columns: count(0)
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT p.*, u.username as sellerName FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.status = ? ORDER BY p.created_at DESC LIMIT ?
+==> Parameters: active(String), 12(Integer)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at, sellerName
+<==        Row: 7, 2, iPhone 13 ¶şÊÖ, <<BLOB>>, 2500.00, 5999.00, ÊıÂëµç×Ó, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, 0, 0, 2026-09-04 18:20:02, 2026-09-04 18:20:02, null, zhangsan
+<==        Row: 4, 1, C++ Primer µÚÎå°æ, <<BLOB>>, 45.00, 128.00, Êé¼®½Ì²Ä, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, null, 0, 0, 2026-09-04 13:21:44, 2026-09-04 13:21:44, null, testuser
+<==        Row: 3, null, ²âÊÔÉÌÆ·-ĞèÒªµÇÂ¼, <<BLOB>>, 10.00, null, ²âÊÔ, È«ĞÂ, active, ²âÊÔµØµã, null, 0, 0, 2026-09-04 13:20:09, 2026-09-04 13:20:09, null, null
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@627dceff]
+2026-10-07T23:36:56.697+08:00  INFO 25148 --- [nio-8080-exec-7] c.t.s.controller.ProductController       : å•†å“åˆ†é¡µæŸ¥è¯¢ï¼šProductPageQueryDTO(page=1, pageSize=12, category=null, status=active, keyword=null)
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ff2237b] was not registered for synchronization because synchronization is not active
+Cache Hit Ratio [SQL_CACHE]: 0.375
+JDBC Connection [HikariProxyConnection@319289623 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT count(0) FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.status = ?
+==> Parameters: active(String)
+<==    Columns: count(0)
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT p.*, u.username as sellerName FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.status = ? ORDER BY p.created_at DESC LIMIT ?
+==> Parameters: active(String), 12(Integer)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at, sellerName
+<==        Row: 7, 2, iPhone 13 ¶şÊÖ, <<BLOB>>, 2500.00, 5999.00, ÊıÂëµç×Ó, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, 0, 0, 2026-09-04 18:20:02, 2026-09-04 18:20:02, null, zhangsan
+<==        Row: 4, 1, C++ Primer µÚÎå°æ, <<BLOB>>, 45.00, 128.00, Êé¼®½Ì²Ä, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, null, 0, 0, 2026-09-04 13:21:44, 2026-09-04 13:21:44, null, testuser
+<==        Row: 3, null, ²âÊÔÉÌÆ·-ĞèÒªµÇÂ¼, <<BLOB>>, 10.00, null, ²âÊÔ, È«ĞÂ, active, ²âÊÔµØµã, null, 0, 0, 2026-09-04 13:20:09, 2026-09-04 13:20:09, null, null
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ff2237b]
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a8743ff]
+JDBC Connection [HikariProxyConnection@2138399201 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 'pending' AND created_at < DATE_SUB(NOW(), INTERVAL ? MINUTE)
+==> Parameters: 30(Integer)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a8743ff]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a8743ff]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a8743ff]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a8743ff]
+2026-10-07T23:37:13.925+08:00  INFO 25148 --- [nio-8080-exec-1] c.t.s.controller.UserController          : ç”¨æˆ·ç™»å½•ï¼šlisi
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@406ce7c4] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@558705058 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM users WHERE username = ?
+==> Parameters: lisi(String)
+<==    Columns: id, username, password_hash, email, phone, student_id, real_name, role, credit_score, balance, status, created_at, last_login, verified
+<==        Row: 3, lisi, $2a$10$uWDwGsSauTl1veqREAkyYucMlH6lPvj9Dy5slRJHbT3lCVsCZDVsm, lisi@example.com, 13700137000, 2024002, ÀîËÄ, student, 100, 0.00, active, 2026-09-04 18:51:16, 2026-10-07 23:36:45, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@406ce7c4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70be22e9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1472965117 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: UPDATE users SET username=?, password_hash=?, email=?, phone=?, student_id=?, real_name=?, role=?, credit_score=?, balance=?, status=?, last_login=?, verified=? WHERE id=?
+==> Parameters: lisi(String), $2a$10$uWDwGsSauTl1veqREAkyYucMlH6lPvj9Dy5slRJHbT3lCVsCZDVsm(String), lisi@example.com(String), 13700137000(String), 2024002(String), ÀîËÄ(String), student(String), 100(Integer), 0.00(BigDecimal), active(String), 2026-10-07T23:37:14.044150600(LocalDateTime), 0(Integer), 3(Integer)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70be22e9]
+2026-10-07T23:37:14.122+08:00  INFO 25148 --- [nio-8080-exec-4] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:14.124+08:00  INFO 25148 --- [nio-8080-exec-4] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+2026-10-07T23:37:14.124+08:00  INFO 25148 --- [nio-8080-exec-2] c.t.s.controller.ProductController       : å•†å“åˆ†é¡µæŸ¥è¯¢ï¼šProductPageQueryDTO(page=1, pageSize=12, category=null, status=active, keyword=null)
+Creating a new SqlSession
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6717a329] was not registered for synchronization because synchronization is not active
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70c8f73f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@725648000 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+Cache Hit Ratio [SQL_CACHE]: 0.4444444444444444
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6717a329]
+JDBC Connection [HikariProxyConnection@898736410 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT count(0) FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.status = ?
+==> Parameters: active(String)
+<==    Columns: count(0)
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT p.*, u.username as sellerName FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.status = ? ORDER BY p.created_at DESC LIMIT ?
+==> Parameters: active(String), 12(Integer)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at, sellerName
+<==        Row: 7, 2, iPhone 13 ¶şÊÖ, <<BLOB>>, 2500.00, 5999.00, ÊıÂëµç×Ó, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, 0, 0, 2026-09-04 18:20:02, 2026-09-04 18:20:02, null, zhangsan
+<==        Row: 4, 1, C++ Primer µÚÎå°æ, <<BLOB>>, 45.00, 128.00, Êé¼®½Ì²Ä, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, null, 0, 0, 2026-09-04 13:21:44, 2026-09-04 13:21:44, null, testuser
+<==        Row: 3, null, ²âÊÔÉÌÆ·-ĞèÒªµÇÂ¼, <<BLOB>>, 10.00, null, ²âÊÔ, È«ĞÂ, active, ²âÊÔµØµã, null, 0, 0, 2026-09-04 13:20:09, 2026-09-04 13:20:09, null, null
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70c8f73f]
+2026-10-07T23:37:16.477+08:00  INFO 25148 --- [nio-8080-exec-3] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:16.478+08:00  INFO 25148 --- [nio-8080-exec-3] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f0181c9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@960703790 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f0181c9]
+2026-10-07T23:37:23.840+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:23.842+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+2026-10-07T23:37:23.844+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.controller.OrderController         : ä¹°å®¶æŸ¥è¯¢è®¢å•
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12fa1c24] was not registered for synchronization because synchronization is not active
+Cache Hit Ratio [SQL_CACHE]: 0.5
+2026-10-07T23:37:23.848+08:00  INFO 25148 --- [nio-8080-exec-5] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+JDBC Connection [HikariProxyConnection@2061324265 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT count(0) FROM orders o LEFT JOIN products p ON o.product_id = p.id LEFT JOIN users u_seller ON o.seller_id = u_seller.id WHERE o.buyer_id = ?
+==> Parameters: 3(Integer)
+2026-10-07T23:37:23.849+08:00  INFO 25148 --- [nio-8080-exec-5] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@402bbe86] was not registered for synchronization because synchronization is not active
+<==    Columns: count(0)
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT o.*, p.title AS productTitle, p.image_path AS productImage, u_seller.username AS sellerName FROM orders o LEFT JOIN products p ON o.product_id = p.id LEFT JOIN users u_seller ON o.seller_id = u_seller.id WHERE o.buyer_id = ? ORDER BY o.created_at DESC LIMIT ?
+JDBC Connection [HikariProxyConnection@1672983437 wrapping com.mysql.cj.jdbc.ConnectionImpl@4add3305] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==> Parameters: 3(Integer)
+==> Parameters: 3(Integer), 10(Integer)
+<==    Columns: COUNT(*)
+<==    Columns: id, product_id, buyer_id, seller_id, price, status, payment_method, delivery_method, meetup_location, meetup_time, created_at, completed_at, productTitle, productImage, sellerName
+<==        Row: 0
+<==      Total: 1
+<==        Row: 3, 8, 3, 2, 35.00, completed, Î¢ĞÅÖ§¸¶, µ±Ãæ½»Ò×, Í¼Êé¹İÒ»Â¥, 2026-10-08 12:00:00, 2026-10-07 23:36:46, 2026-10-07 23:36:46, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, null, zhangsan
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@402bbe86]
+<==        Row: 2, 8, 3, 2, 35.00, completed, Î¢ĞÅÖ§¸¶, µ±Ãæ½»Ò×, Í¼Êé¹İÒ»Â¥, 2026-10-08 12:00:00, 2026-10-07 23:35:32, 2026-10-07 23:35:31, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, null, zhangsan
+<==        Row: 1, 6, 3, 2, 2500.00, completed, Î¢ĞÅ, Ãæ½», ¶«ÇøÊ³ÌÃÃÅ¿Ú, 2026-09-05 14:00:00, 2026-09-04 19:54:13, 2026-09-04 19:59:03, iPhone 13 ¶şÊÖ, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, zhangsan
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12fa1c24]
+2026-10-07T23:37:27.864+08:00  INFO 25148 --- [nio-8080-exec-8] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:27.865+08:00  INFO 25148 --- [nio-8080-exec-8] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@793195b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1884832520 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT c.*, CASE WHEN c.user1_id = ? THEN u2.username ELSE u1.username END AS otherUserName, m.content AS lastMessageContent, p.title AS productTitle FROM conversations c LEFT JOIN users u1 ON c.user1_id = u1.id LEFT JOIN users u2 ON c.user2_id = u2.id LEFT JOIN messages m ON c.last_message_id = m.id LEFT JOIN products p ON c.product_id = p.id WHERE c.user1_id = ? OR c.user2_id = ? ORDER BY c.last_message_time DESC
+==> Parameters: 3(Integer), 3(Integer), 3(Integer)
+<==    Columns: id, user1_id, user2_id, product_id, last_message_id, last_message_time, otherUserName, lastMessageContent, productTitle
+<==        Row: 1, 2, 3, 8, 4, 2026-10-07 23:36:47, zhangsan, <<BLOB>>, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@793195b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5991cb7c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1180125396 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND sender_id = ? AND product_id = ? AND is_read = 0
+==> Parameters: 3(Integer), 2(Integer), 8(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5991cb7c]
+2026-10-07T23:37:27.882+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:27.884+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c308ede] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@181369056 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c308ede]
+2026-10-07T23:37:27.886+08:00  INFO 25148 --- [nio-8080-exec-7] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:27.887+08:00  INFO 25148 --- [nio-8080-exec-7] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ab1b96d]
+JDBC Connection [HikariProxyConnection@1082301330 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will be managed by Spring
+==>  Preparing: UPDATE messages SET is_read = 1 WHERE sender_id = ? AND receiver_id = ? AND product_id = ? AND is_read = 0
+==> Parameters: 2(Integer), 3(Integer), 8(Integer)
+<==    Updates: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ab1b96d]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ab1b96d] from current transaction
+==>  Preparing: SELECT m.*, u_sender.username AS senderName, u_receiver.username AS receiverName FROM messages m LEFT JOIN users u_sender ON m.sender_id = u_sender.id LEFT JOIN users u_receiver ON m.receiver_id = u_receiver.id WHERE ( (m.sender_id = ? AND m.receiver_id = ?) OR (m.sender_id = ? AND m.receiver_id = ?) ) AND m.product_id = ? ORDER BY m.created_at ASC
+==> Parameters: 3(Integer), 2(Integer), 2(Integer), 3(Integer), 8(Integer)
+<==    Columns: id, sender_id, receiver_id, product_id, content, message_type, is_read, created_at, senderName, receiverName
+<==        Row: 1, 3, 2, 8, <<BLOB>>, text, 0, 2026-10-07 23:35:32, lisi, zhangsan
+<==        Row: 2, 2, 3, 8, <<BLOB>>, text, 1, 2026-10-07 23:35:32, zhangsan, lisi
+<==        Row: 3, 3, 2, 8, <<BLOB>>, text, 0, 2026-10-07 23:36:47, lisi, zhangsan
+<==        Row: 4, 2, 3, 8, <<BLOB>>, text, 1, 2026-10-07 23:36:47, zhangsan, lisi
+<==      Total: 4
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ab1b96d]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ab1b96d]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ab1b96d]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ab1b96d]
+2026-10-07T23:37:31.792+08:00  INFO 25148 --- [nio-8080-exec-1] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c8e7608] was not registered for synchronization because synchronization is not active
+2026-10-07T23:37:31.793+08:00  INFO 25148 --- [nio-8080-exec-1] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f519575] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1805908812 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: select * from products where id = ?
+JDBC Connection [HikariProxyConnection@1324961564 wrapping com.mysql.cj.jdbc.ConnectionImpl@4add3305] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==> Parameters: 7(Integer)
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at
+<==        Row: 0
+<==        Row: 7, 2, iPhone 13 ¶şÊÖ, <<BLOB>>, 2500.00, 5999.00, ÊıÂëµç×Ó, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, 0, 0, 2026-09-04 18:20:02, 2026-09-04 18:20:02, null
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f519575]
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c8e7608]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7610fc1] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@147851027 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM users WHERE id = ?
+==> Parameters: 2(Integer)
+<==    Columns: id, username, password_hash, email, phone, student_id, real_name, role, credit_score, balance, status, created_at, last_login, verified
+<==        Row: 2, zhangsan, $2a$10$i3O.rwMDnzN.7OI0owfzE.kaouN1bgza79Ao2h3gET/F2Rmk6zOKm, zhangsan@example.com, 13900139000, 2024001, ÕÅÈı, student, 100, 0.00, active, 2026-09-04 12:31:06, 2026-10-07 23:36:45, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7610fc1]
+2026-10-07T23:37:31.811+08:00  INFO 25148 --- [nio-8080-exec-4] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:31.812+08:00  INFO 25148 --- [nio-8080-exec-4] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17f354f4] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1294443464 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM favorites WHERE user_id = ? AND product_id = ?
+==> Parameters: 3(Integer), 7(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17f354f4]
+2026-10-07T23:37:35.086+08:00  INFO 25148 --- [nio-8080-exec-3] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:35.087+08:00  INFO 25148 --- [nio-8080-exec-3] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74c6b8c7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@397045855 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74c6b8c7]
+2026-10-07T23:37:36.473+08:00  INFO 25148 --- [nio-8080-exec-5] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:36.474+08:00  INFO 25148 --- [nio-8080-exec-5] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fd6ea05] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@19071401 wrapping com.mysql.cj.jdbc.ConnectionImpl@4add3305] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fd6ea05]
+2026-10-07T23:37:47.551+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:47.551+08:00  INFO 25148 --- [nio-8080-exec-8] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:47.551+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+2026-10-07T23:37:47.551+08:00  INFO 25148 --- [nio-8080-exec-8] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5784f61e] was not registered for synchronization because synchronization is not active
+2026-10-07T23:37:47.553+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.controller.OrderController         : ä¹°å®¶æŸ¥è¯¢è®¢å•
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@16b4e277] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1641913 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+Cache Hit Ratio [SQL_CACHE]: 0.5454545454545454
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5784f61e]
+JDBC Connection [HikariProxyConnection@101074255 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT count(0) FROM orders o LEFT JOIN products p ON o.product_id = p.id LEFT JOIN users u_seller ON o.seller_id = u_seller.id WHERE o.buyer_id = ?
+==> Parameters: 3(Integer)
+<==    Columns: count(0)
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT o.*, p.title AS productTitle, p.image_path AS productImage, u_seller.username AS sellerName FROM orders o LEFT JOIN products p ON o.product_id = p.id LEFT JOIN users u_seller ON o.seller_id = u_seller.id WHERE o.buyer_id = ? ORDER BY o.created_at DESC LIMIT ?
+==> Parameters: 3(Integer), 10(Integer)
+<==    Columns: id, product_id, buyer_id, seller_id, price, status, payment_method, delivery_method, meetup_location, meetup_time, created_at, completed_at, productTitle, productImage, sellerName
+<==        Row: 3, 8, 3, 2, 35.00, completed, Î¢ĞÅÖ§¸¶, µ±Ãæ½»Ò×, Í¼Êé¹İÒ»Â¥, 2026-10-08 12:00:00, 2026-10-07 23:36:46, 2026-10-07 23:36:46, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, null, zhangsan
+<==        Row: 2, 8, 3, 2, 35.00, completed, Î¢ĞÅÖ§¸¶, µ±Ãæ½»Ò×, Í¼Êé¹İÒ»Â¥, 2026-10-08 12:00:00, 2026-10-07 23:35:32, 2026-10-07 23:35:31, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ, null, zhangsan
+<==        Row: 1, 6, 3, 2, 2500.00, completed, Î¢ĞÅ, Ãæ½», ¶«ÇøÊ³ÌÃÃÅ¿Ú, 2026-09-05 14:00:00, 2026-09-04 19:54:13, 2026-09-04 19:59:03, iPhone 13 ¶şÊÖ, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, zhangsan
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@16b4e277]
+2026-10-07T23:37:48.961+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:48.961+08:00  INFO 25148 --- [nio-8080-exec-7] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:48.964+08:00  INFO 25148 --- [nio-8080-exec-7] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+2026-10-07T23:37:48.964+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@786895bd] was not registered for synchronization because synchronization is not active
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51858b04] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@93312173 wrapping com.mysql.cj.jdbc.ConnectionImpl@4add3305] will not be managed by Spring
+JDBC Connection [HikariProxyConnection@1075225104 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==>  Preparing: SELECT c.*, CASE WHEN c.user1_id = ? THEN u2.username ELSE u1.username END AS otherUserName, m.content AS lastMessageContent, p.title AS productTitle FROM conversations c LEFT JOIN users u1 ON c.user1_id = u1.id LEFT JOIN users u2 ON c.user2_id = u2.id LEFT JOIN messages m ON c.last_message_id = m.id LEFT JOIN products p ON c.product_id = p.id WHERE c.user1_id = ? OR c.user2_id = ? ORDER BY c.last_message_time DESC
+==> Parameters: 3(Integer)
+==> Parameters: 3(Integer), 3(Integer), 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+<==    Columns: id, user1_id, user2_id, product_id, last_message_id, last_message_time, otherUserName, lastMessageContent, productTitle
+<==        Row: 1, 2, 3, 8, 4, 2026-10-07 23:36:47, zhangsan, <<BLOB>>, ¡¾ÑİÊ¾¡¿¾Å³ÉĞÂ»¤ÑÛÌ¨µÆ
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51858b04]
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@786895bd]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11b57e50] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@760009894 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND sender_id = ? AND product_id = ? AND is_read = 0
+==> Parameters: 3(Integer), 2(Integer), 8(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11b57e50]
+2026-10-07T23:37:49.036+08:00  INFO 25148 --- [nio-8080-exec-1] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:49.038+08:00  INFO 25148 --- [nio-8080-exec-1] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47a3be0c]
+JDBC Connection [HikariProxyConnection@10444672 wrapping com.mysql.cj.jdbc.ConnectionImpl@4add3305] will be managed by Spring
+==>  Preparing: UPDATE messages SET is_read = 1 WHERE sender_id = ? AND receiver_id = ? AND product_id = ? AND is_read = 0
+==> Parameters: 2(Integer), 3(Integer), 8(Integer)
+<==    Updates: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47a3be0c]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47a3be0c] from current transaction
+==>  Preparing: SELECT m.*, u_sender.username AS senderName, u_receiver.username AS receiverName FROM messages m LEFT JOIN users u_sender ON m.sender_id = u_sender.id LEFT JOIN users u_receiver ON m.receiver_id = u_receiver.id WHERE ( (m.sender_id = ? AND m.receiver_id = ?) OR (m.sender_id = ? AND m.receiver_id = ?) ) AND m.product_id = ? ORDER BY m.created_at ASC
+==> Parameters: 3(Integer), 2(Integer), 2(Integer), 3(Integer), 8(Integer)
+<==    Columns: id, sender_id, receiver_id, product_id, content, message_type, is_read, created_at, senderName, receiverName
+<==        Row: 1, 3, 2, 8, <<BLOB>>, text, 0, 2026-10-07 23:35:32, lisi, zhangsan
+<==        Row: 2, 2, 3, 8, <<BLOB>>, text, 1, 2026-10-07 23:35:32, zhangsan, lisi
+<==        Row: 3, 3, 2, 8, <<BLOB>>, text, 0, 2026-10-07 23:36:47, lisi, zhangsan
+<==        Row: 4, 2, 3, 8, <<BLOB>>, text, 1, 2026-10-07 23:36:47, zhangsan, lisi
+<==      Total: 4
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47a3be0c]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47a3be0c]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47a3be0c]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47a3be0c]
+2026-10-07T23:37:50.363+08:00  INFO 25148 --- [nio-8080-exec-4] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b1e9821] was not registered for synchronization because synchronization is not active
+2026-10-07T23:37:50.365+08:00  INFO 25148 --- [nio-8080-exec-4] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+JDBC Connection [HikariProxyConnection@336495492 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: select * from products where id = ?
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60882342] was not registered for synchronization because synchronization is not active
+==> Parameters: 7(Integer)
+JDBC Connection [HikariProxyConnection@1842454355 wrapping com.mysql.cj.jdbc.ConnectionImpl@4add3305] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==> Parameters: 3(Integer)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==        Row: 7, 2, iPhone 13 ¶şÊÖ, <<BLOB>>, 2500.00, 5999.00, ÊıÂëµç×Ó, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, 0, 0, 2026-09-04 18:20:02, 2026-09-04 18:20:02, null
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60882342]
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b1e9821]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f860ace] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1622561935 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM users WHERE id = ?
+==> Parameters: 2(Integer)
+<==    Columns: id, username, password_hash, email, phone, student_id, real_name, role, credit_score, balance, status, created_at, last_login, verified
+<==        Row: 2, zhangsan, $2a$10$i3O.rwMDnzN.7OI0owfzE.kaouN1bgza79Ao2h3gET/F2Rmk6zOKm, zhangsan@example.com, 13900139000, 2024001, ÕÅÈı, student, 100, 0.00, active, 2026-09-04 12:31:06, 2026-10-07 23:36:45, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f860ace]
+2026-10-07T23:37:50.386+08:00  INFO 25148 --- [nio-8080-exec-2] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:50.388+08:00  INFO 25148 --- [nio-8080-exec-2] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21c8a7b7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@434723813 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT * FROM favorites WHERE user_id = ? AND product_id = ?
+==> Parameters: 3(Integer), 7(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21c8a7b7]
+2026-10-07T23:37:51.765+08:00  INFO 25148 --- [nio-8080-exec-5] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:51.769+08:00  INFO 25148 --- [nio-8080-exec-5] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@347530f5] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1019500591 wrapping com.mysql.cj.jdbc.ConnectionImpl@4add3305] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@347530f5]
+2026-10-07T23:37:53.228+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:53.230+08:00  INFO 25148 --- [nio-8080-exec-8] c.t.s.controller.ProductController       : å•†å“åˆ†é¡µæŸ¥è¯¢ï¼šProductPageQueryDTO(page=1, pageSize=12, category=null, status=active, keyword=null)
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2095fda6] was not registered for synchronization because synchronization is not active
+2026-10-07T23:37:53.230+08:00  INFO 25148 --- [nio-8080-exec-6] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+Cache Hit Ratio [SQL_CACHE]: 0.5833333333333334
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5dcec815] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1775682270 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5dcec815]
+JDBC Connection [HikariProxyConnection@1347541932 wrapping com.mysql.cj.jdbc.ConnectionImpl@4add3305] will not be managed by Spring
+==>  Preparing: SELECT count(0) FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.status = ?
+==> Parameters: active(String)
+<==    Columns: count(0)
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT p.*, u.username as sellerName FROM products p LEFT JOIN users u ON p.seller_id = u.id WHERE p.status = ? ORDER BY p.created_at DESC LIMIT ?
+==> Parameters: active(String), 12(Integer)
+<==    Columns: id, seller_id, title, description, price, original_price, category, condition, status, location, image_path, view_count, like_count, created_at, updated_at, expires_at, sellerName
+<==        Row: 7, 2, iPhone 13 ¶şÊÖ, <<BLOB>>, 2500.00, 5999.00, ÊıÂëµç×Ó, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, /images/6a0889c2-2dc4-4629-907b-54f1d53f4e54.jpg, 0, 0, 2026-09-04 18:20:02, 2026-09-04 18:20:02, null, zhangsan
+<==        Row: 4, 1, C++ Primer µÚÎå°æ, <<BLOB>>, 45.00, 128.00, Êé¼®½Ì²Ä, ¾Å³ÉĞÂ, active, ±±ÇøËŞÉá, null, 0, 0, 2026-09-04 13:21:44, 2026-09-04 13:21:44, null, testuser
+<==        Row: 3, null, ²âÊÔÉÌÆ·-ĞèÒªµÇÂ¼, <<BLOB>>, 10.00, null, ²âÊÔ, È«ĞÂ, active, ²âÊÔµØµã, null, 0, 0, 2026-09-04 13:20:09, 2026-09-04 13:20:09, null, null
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2095fda6]
+2026-10-07T23:37:56.465+08:00  INFO 25148 --- [nio-8080-exec-7] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:37:56.466+08:00  INFO 25148 --- [nio-8080-exec-7] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f24e863] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@42238248 wrapping com.mysql.cj.jdbc.ConnectionImpl@4add3305] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f24e863]
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2449c85a]
+JDBC Connection [HikariProxyConnection@99684354 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 'pending' AND created_at < DATE_SUB(NOW(), INTERVAL ? MINUTE)
+==> Parameters: 30(Integer)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2449c85a]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2449c85a]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2449c85a]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2449c85a]
+2026-10-07T23:38:16.478+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.interceptor.JwtTokenInterceptor    : JWT æ‹¦æˆªå™¨æ ¡éªŒ tokenï¼šeyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc5MTM5NDYzNH0.doA7tYS4Rc0Z-j0W4OsHrP-rf1LbiFwHhoU6wOZqEI4
+2026-10-07T23:38:16.478+08:00  INFO 25148 --- [nio-8080-exec-9] c.t.s.interceptor.JwtTokenInterceptor    : å½“å‰ç™»å½•ç”¨æˆ· idï¼š3
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d36646d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1712614537 wrapping com.mysql.cj.jdbc.ConnectionImpl@7abdf9cc] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM messages WHERE receiver_id = ? AND is_read = 0
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d36646d]

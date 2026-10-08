@@ -1,0 +1,148 @@
+0 verbose cli C:\Users\ZhuanZ\AppData\Local\Doubao\User Data\sandbox_runtime\bases\9f6d27f23933fb44a3a1c728c88a5ce4\node\node.exe C:\Users\ZhuanZ\AppData\Local\Doubao\User Data\sandbox_runtime\bases\9f6d27f23933fb44a3a1c728c88a5ce4\node\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.2
+2 info using node@v20.20.2
+3 silly config load:file:C:\Users\ZhuanZ\AppData\Local\Doubao\User Data\sandbox_runtime\bases\9f6d27f23933fb44a3a1c728c88a5ce4\node\node_modules\npm\npmrc
+4 silly config load:file:D:\Downloads\second_hand_trade\project-rjwm-admin-vue-ts\.npmrc
+5 silly config load:file:C:\Users\ZhuanZ\AppData\Local\Doubao\User Data\sandbox_runtime\bases\9f6d27f23933fb44a3a1c728c88a5ce4\.npmrc
+6 silly config load:file:C:\Users\ZhuanZ\AppData\Local\Doubao\User Data\sandbox_runtime\bases\9f6d27f23933fb44a3a1c728c88a5ce4\.gnpmrc
+7 verbose title npm install
+8 verbose argv "install" "--no-audit" "--no-fund" "--legacy-peer-deps" "--registry" "https://registry.npmjs.org/" "--cache" "D:\\Downloads\\second_hand_trade\\_npmcache" "--strict-ssl" "true"
+9 verbose logfile logs-max:10 dir:D:\Downloads\second_hand_trade\_npmcache\_logs\2026-10-07T14_03_15_794Z-
+10 verbose logfile D:\Downloads\second_hand_trade\_npmcache\_logs\2026-10-07T14_03_15_794Z-debug-0.log
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest @types/echarts@4.9.13
+15 silly packumentCache full:https://registry.npmjs.org/@types%2fecharts cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/@types%2fecharts 2643ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/@types%2fecharts set size:undefined disposed:false
+18 silly fetch manifest @types/webpack@4.41.32
+19 silly packumentCache full:https://registry.npmjs.org/@types%2fwebpack cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/npm 3888ms
+21 http fetch GET 200 https://registry.npmjs.org/@types%2fwebpack 1219ms (cache miss)
+22 silly packumentCache full:https://registry.npmjs.org/@types%2fwebpack set size:undefined disposed:false
+23 silly fetch manifest area-data@5.0.6
+24 silly packumentCache full:https://registry.npmjs.org/area-data cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/area-data 966ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/area-data set size:undefined disposed:false
+27 silly fetch manifest axios@https://registry.npm.taobao.org/axios/download/axios-0.19.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.0.tgz
+28 silly tarball no local data for axios@https://registry.npm.taobao.org/axios/download/axios-0.19.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.0.tgz. Extracting by manifest.
+29 http fetch GET https://registry.npm.taobao.org/axios/download/axios-0.19.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+30 http fetch GET https://registry.npm.taobao.org/axios/download/axios-0.19.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.0.tgz attempt 2 failed with CERT_HAS_EXPIRED
+31 http fetch GET https://registry.npm.taobao.org/axios/download/axios-0.19.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.0.tgz attempt 3 failed with CERT_HAS_EXPIRED
+32 silly fetch manifest echarts@5.3.2
+33 silly packumentCache full:https://registry.npmjs.org/echarts cache-miss
+34 http fetch GET 200 https://registry.npmjs.org/echarts 685ms (cache miss)
+35 silly packumentCache full:https://registry.npmjs.org/echarts set size:undefined disposed:false
+36 silly fetch manifest element-ui@https://registry.npm.taobao.org/element-ui/download/element-ui-2.13.0.tgz
+37 silly tarball no local data for element-ui@https://registry.npm.taobao.org/element-ui/download/element-ui-2.13.0.tgz. Extracting by manifest.
+38 http fetch GET https://registry.npm.taobao.org/element-ui/download/element-ui-2.13.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+39 http fetch GET https://registry.npm.taobao.org/element-ui/download/element-ui-2.13.0.tgz attempt 2 failed with CERT_HAS_EXPIRED
+40 http fetch GET https://registry.npm.taobao.org/element-ui/download/element-ui-2.13.0.tgz attempt 3 failed with CERT_HAS_EXPIRED
+41 silly fetch manifest js-cookie@https://registry.npm.taobao.org/js-cookie/download/js-cookie-2.2.1.tgz
+42 silly tarball no local data for js-cookie@https://registry.npm.taobao.org/js-cookie/download/js-cookie-2.2.1.tgz. Extracting by manifest.
+43 http fetch GET https://registry.npm.taobao.org/js-cookie/download/js-cookie-2.2.1.tgz attempt 1 failed with CERT_HAS_EXPIRED
+44 http fetch GET https://registry.npm.taobao.org/js-cookie/download/js-cookie-2.2.1.tgz attempt 2 failed with CERT_HAS_EXPIRED
+45 http fetch GET https://registry.npm.taobao.org/js-cookie/download/js-cookie-2.2.1.tgz attempt 3 failed with CERT_HAS_EXPIRED
+46 silly fetch manifest md5@^2.3.0
+47 silly packumentCache full:https://registry.npmjs.org/md5 cache-miss
+48 http fetch GET 200 https://registry.npmjs.org/md5 911ms (cache miss)
+49 silly packumentCache full:https://registry.npmjs.org/md5 set size:undefined disposed:false
+50 silly fetch manifest moment@https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz
+51 silly tarball no local data for moment@https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz. Extracting by manifest.
+52 http fetch GET https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+53 http fetch GET https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz attempt 2 failed with CERT_HAS_EXPIRED
+54 http fetch GET https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz attempt 3 failed with CERT_HAS_EXPIRED
+55 silly fetch manifest normalize.css@https://registry.npm.taobao.org/normalize.css/download/normalize.css-8.0.1.tgz
+56 silly tarball no local data for normalize.css@https://registry.npm.taobao.org/normalize.css/download/normalize.css-8.0.1.tgz. Extracting by manifest.
+57 http fetch GET https://registry.npm.taobao.org/normalize.css/download/normalize.css-8.0.1.tgz attempt 1 failed with CERT_HAS_EXPIRED
+58 http fetch GET https://registry.npm.taobao.org/normalize.css/download/normalize.css-8.0.1.tgz attempt 2 failed with CERT_HAS_EXPIRED
+59 http fetch GET https://registry.npm.taobao.org/normalize.css/download/normalize.css-8.0.1.tgz attempt 3 failed with CERT_HAS_EXPIRED
+60 silly fetch manifest nprogress@https://registry.npm.taobao.org/nprogress/download/nprogress-0.2.0.tgz
+61 silly tarball no local data for nprogress@https://registry.npm.taobao.org/nprogress/download/nprogress-0.2.0.tgz. Extracting by manifest.
+62 http fetch GET https://registry.npm.taobao.org/nprogress/download/nprogress-0.2.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+63 http fetch GET https://registry.npm.taobao.org/nprogress/download/nprogress-0.2.0.tgz attempt 2 failed with CERT_HAS_EXPIRED
+64 http fetch GET https://registry.npm.taobao.org/nprogress/download/nprogress-0.2.0.tgz attempt 3 failed with CERT_HAS_EXPIRED
+65 silly fetch manifest path-to-regexp@https://registry.npm.taobao.org/path-to-regexp/download/path-to-regexp-3.2.0.tgz
+66 silly tarball no local data for path-to-regexp@https://registry.npm.taobao.org/path-to-regexp/download/path-to-regexp-3.2.0.tgz. Extracting by manifest.
+67 http fetch GET https://registry.npm.taobao.org/path-to-regexp/download/path-to-regexp-3.2.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+68 http fetch GET https://registry.npm.taobao.org/path-to-regexp/download/path-to-regexp-3.2.0.tgz attempt 2 failed with CERT_HAS_EXPIRED
+69 http fetch GET https://registry.npm.taobao.org/path-to-regexp/download/path-to-regexp-3.2.0.tgz attempt 3 failed with CERT_HAS_EXPIRED
+70 silly fetch manifest register-service-worker@https://registry.npm.taobao.org/register-service-worker/download/register-service-worker-1.6.2.tgz
+71 silly tarball no local data for register-service-worker@https://registry.npm.taobao.org/register-service-worker/download/register-service-worker-1.6.2.tgz. Extracting by manifest.
+72 http fetch GET https://registry.npm.taobao.org/register-service-worker/download/register-service-worker-1.6.2.tgz attempt 1 failed with CERT_HAS_EXPIRED
+73 http fetch GET https://registry.npm.taobao.org/register-service-worker/download/register-service-worker-1.6.2.tgz attempt 2 failed with CERT_HAS_EXPIRED
+74 http fetch GET https://registry.npm.taobao.org/register-service-worker/download/register-service-worker-1.6.2.tgz attempt 3 failed with CERT_HAS_EXPIRED
+75 silly fetch manifest vue@https://registry.npm.taobao.org/vue/download/vue-2.6.10.tgz
+76 silly tarball no local data for vue@https://registry.npm.taobao.org/vue/download/vue-2.6.10.tgz. Extracting by manifest.
+77 http fetch GET https://registry.npm.taobao.org/vue/download/vue-2.6.10.tgz attempt 1 failed with CERT_HAS_EXPIRED
+78 http fetch GET https://registry.npm.taobao.org/vue/download/vue-2.6.10.tgz attempt 2 failed with CERT_HAS_EXPIRED
+79 http fetch GET https://registry.npm.taobao.org/vue/download/vue-2.6.10.tgz attempt 3 failed with CERT_HAS_EXPIRED
+80 silly fetch manifest vue-area-linkage@5.1.0
+81 silly packumentCache full:https://registry.npmjs.org/vue-area-linkage cache-miss
+82 http fetch GET 200 https://registry.npmjs.org/vue-area-linkage 1519ms (cache miss)
+83 silly packumentCache full:https://registry.npmjs.org/vue-area-linkage set size:undefined disposed:false
+84 silly fetch manifest vue-class-component@https://registry.npm.taobao.org/vue-class-component/download/vue-class-component-7.1.0.tgz
+85 silly tarball no local data for vue-class-component@https://registry.npm.taobao.org/vue-class-component/download/vue-class-component-7.1.0.tgz. Extracting by manifest.
+86 http fetch GET https://registry.npm.taobao.org/vue-class-component/download/vue-class-component-7.1.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+87 http fetch GET https://registry.npm.taobao.org/vue-class-component/download/vue-class-component-7.1.0.tgz attempt 2 failed with CERT_HAS_EXPIRED
+88 http fetch GET https://registry.npm.taobao.org/vue-class-component/download/vue-class-component-7.1.0.tgz attempt 3 failed with CERT_HAS_EXPIRED
+89 silly fetch manifest vue-property-decorator@https://registry.npm.taobao.org/vue-property-decorator/download/vue-property-decorator-8.3.0.tgz
+90 silly tarball no local data for vue-property-decorator@https://registry.npm.taobao.org/vue-property-decorator/download/vue-property-decorator-8.3.0.tgz. Extracting by manifest.
+91 http fetch GET https://registry.npm.taobao.org/vue-property-decorator/download/vue-property-decorator-8.3.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+92 http fetch GET https://registry.npm.taobao.org/vue-property-decorator/download/vue-property-decorator-8.3.0.tgz attempt 2 failed with CERT_HAS_EXPIRED
+93 http fetch GET https://registry.npm.taobao.org/vue-property-decorator/download/vue-property-decorator-8.3.0.tgz attempt 3 failed with CERT_HAS_EXPIRED
+94 silly fetch manifest vue-router@https://registry.npm.taobao.org/vue-router/download/vue-router-3.1.3.tgz?cache=0&sync_timestamp=1572571382028&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-router%2Fdownload%2Fvue-router-3.1.3.tgz
+95 silly tarball no local data for vue-router@https://registry.npm.taobao.org/vue-router/download/vue-router-3.1.3.tgz?cache=0&sync_timestamp=1572571382028&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-router%2Fdownload%2Fvue-router-3.1.3.tgz. Extracting by manifest.
+96 http fetch GET https://registry.npm.taobao.org/vue-router/download/vue-router-3.1.3.tgz?cache=0&sync_timestamp=1572571382028&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-router%2Fdownload%2Fvue-router-3.1.3.tgz attempt 1 failed with CERT_HAS_EXPIRED
+97 http fetch GET https://registry.npm.taobao.org/vue-router/download/vue-router-3.1.3.tgz?cache=0&sync_timestamp=1572571382028&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-router%2Fdownload%2Fvue-router-3.1.3.tgz attempt 2 failed with CERT_HAS_EXPIRED
+98 http fetch GET https://registry.npm.taobao.org/vue-router/download/vue-router-3.1.3.tgz?cache=0&sync_timestamp=1572571382028&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-router%2Fdownload%2Fvue-router-3.1.3.tgz attempt 3 failed with CERT_HAS_EXPIRED
+99 silly fetch manifest vue-svgicon@https://registry.npm.taobao.org/vue-svgicon/download/vue-svgicon-3.2.6.tgz
+100 silly tarball no local data for vue-svgicon@https://registry.npm.taobao.org/vue-svgicon/download/vue-svgicon-3.2.6.tgz. Extracting by manifest.
+101 http fetch GET https://registry.npm.taobao.org/vue-svgicon/download/vue-svgicon-3.2.6.tgz attempt 1 failed with CERT_HAS_EXPIRED
+102 http fetch GET https://registry.npm.taobao.org/vue-svgicon/download/vue-svgicon-3.2.6.tgz attempt 2 failed with CERT_HAS_EXPIRED
+103 http fetch GET https://registry.npm.taobao.org/vue-svgicon/download/vue-svgicon-3.2.6.tgz attempt 3 failed with CERT_HAS_EXPIRED
+104 silly fetch manifest vuex@https://registry.npm.taobao.org/vuex/download/vuex-3.1.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvuex%2Fdownload%2Fvuex-3.1.2.tgz
+105 silly tarball no local data for vuex@https://registry.npm.taobao.org/vuex/download/vuex-3.1.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvuex%2Fdownload%2Fvuex-3.1.2.tgz. Extracting by manifest.
+106 http fetch GET https://registry.npm.taobao.org/vuex/download/vuex-3.1.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvuex%2Fdownload%2Fvuex-3.1.2.tgz attempt 1 failed with CERT_HAS_EXPIRED
+107 http fetch GET https://registry.npm.taobao.org/vuex/download/vuex-3.1.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvuex%2Fdownload%2Fvuex-3.1.2.tgz attempt 2 failed with CERT_HAS_EXPIRED
+108 http fetch GET https://registry.npm.taobao.org/vuex/download/vuex-3.1.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvuex%2Fdownload%2Fvuex-3.1.2.tgz attempt 3 failed with CERT_HAS_EXPIRED
+109 silly fetch manifest vuex-class@https://registry.npm.taobao.org/vuex-class/download/vuex-class-0.3.2.tgz
+110 silly tarball no local data for vuex-class@https://registry.npm.taobao.org/vuex-class/download/vuex-class-0.3.2.tgz. Extracting by manifest.
+111 http fetch GET https://registry.npm.taobao.org/vuex-class/download/vuex-class-0.3.2.tgz attempt 1 failed with CERT_HAS_EXPIRED
+112 http fetch GET https://registry.npm.taobao.org/vuex-class/download/vuex-class-0.3.2.tgz attempt 2 failed with CERT_HAS_EXPIRED
+113 http fetch GET https://registry.npm.taobao.org/vuex-class/download/vuex-class-0.3.2.tgz attempt 3 failed with CERT_HAS_EXPIRED
+114 silly fetch manifest vuex-module-decorators@https://registry.npm.taobao.org/vuex-module-decorators/download/vuex-module-decorators-0.10.1.tgz
+115 silly tarball no local data for vuex-module-decorators@https://registry.npm.taobao.org/vuex-module-decorators/download/vuex-module-decorators-0.10.1.tgz. Extracting by manifest.
+116 http fetch GET https://registry.npm.taobao.org/vuex-module-decorators/download/vuex-module-decorators-0.10.1.tgz attempt 1 failed with CERT_HAS_EXPIRED
+117 http fetch GET https://registry.npm.taobao.org/vuex-module-decorators/download/vuex-module-decorators-0.10.1.tgz attempt 2 failed with CERT_HAS_EXPIRED
+118 http fetch GET https://registry.npm.taobao.org/vuex-module-decorators/download/vuex-module-decorators-0.10.1.tgz attempt 3 failed with CERT_HAS_EXPIRED
+119 silly fetch manifest vuex-persistedstate@https://registry.npm.taobao.org/vuex-persistedstate/download/vuex-persistedstate-2.7.0.tgz
+120 silly tarball no local data for vuex-persistedstate@https://registry.npm.taobao.org/vuex-persistedstate/download/vuex-persistedstate-2.7.0.tgz. Extracting by manifest.
+121 http fetch GET https://registry.npm.taobao.org/vuex-persistedstate/download/vuex-persistedstate-2.7.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+122 http fetch GET https://registry.npm.taobao.org/vuex-persistedstate/download/vuex-persistedstate-2.7.0.tgz attempt 2 failed with CERT_HAS_EXPIRED
+123 http fetch GET https://registry.npm.taobao.org/vuex-persistedstate/download/vuex-persistedstate-2.7.0.tgz attempt 3 failed with CERT_HAS_EXPIRED
+124 silly fetch manifest @types/jest@https://registry.npm.taobao.org/@types/jest/download/@types/jest-24.0.23.tgz?cache=0&sync_timestamp=1573592350097&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-24.0.23.tgz
+125 silly tarball no local data for @types/jest@https://registry.npm.taobao.org/@types/jest/download/@types/jest-24.0.23.tgz?cache=0&sync_timestamp=1573592350097&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-24.0.23.tgz. Extracting by manifest.
+126 http fetch GET https://registry.npm.taobao.org/@types/jest/download/@types/jest-24.0.23.tgz?cache=0&sync_timestamp=1573592350097&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-24.0.23.tgz attempt 1 failed with CERT_HAS_EXPIRED
+127 http fetch GET https://registry.npm.taobao.org/@types/jest/download/@types/jest-24.0.23.tgz?cache=0&sync_timestamp=1573592350097&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-24.0.23.tgz attempt 2 failed with CERT_HAS_EXPIRED
+128 http fetch GET https://registry.npm.taobao.org/@types/jest/download/@types/jest-24.0.23.tgz?cache=0&sync_timestamp=1573592350097&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-24.0.23.tgz attempt 3 failed with CERT_HAS_EXPIRED
+129 silly fetch manifest @types/js-cookie@https://registry.npm.taobao.org/@types/js-cookie/download/@types/js-cookie-2.2.4.tgz
+130 silly tarball no local data for @types/js-cookie@https://registry.npm.taobao.org/@types/js-cookie/download/@types/js-cookie-2.2.4.tgz. Extracting by manifest.
+131 http fetch GET https://registry.npm.taobao.org/@types/js-cookie/download/@types/js-cookie-2.2.4.tgz attempt 1 failed with CERT_HAS_EXPIRED
+132 http fetch GET https://registry.npm.taobao.org/@types/js-cookie/download/@types/js-cookie-2.2.4.tgz attempt 2 failed with CERT_HAS_EXPIRED
+133 http fetch GET https://registry.npm.taobao.org/@types/js-cookie/download/@types/js-cookie-2.2.4.tgz attempt 3 failed with CERT_HAS_EXPIRED
+134 silly fetch manifest @types/nprogress@https://registry.npm.taobao.org/@types/nprogress/download/@types/nprogress-0.2.0.tgz
+135 silly tarball no local data for @types/nprogress@https://registry.npm.taobao.org/@types/nprogress/download/@types/nprogress-0.2.0.tgz. Extracting by manifest.
+136 http fetch GET https://registry.npm.taobao.org/@types/nprogress/download/@types/nprogress-0.2.0.tgz attempt 1 failed with CERT_HAS_EXPIRED
+137 http fetch GET https://registry.npm.taobao.org/@types/nprogress/download/@types/nprogress-0.2.0.tgz attempt 2 failed with CERT_HAS_EXPIRED
+138 http fetch GET https://registry.npm.taobao.org/@types/nprogress/download/@types/nprogress-0.2.0.tgz attempt 3 failed with CERT_HAS_EXPIRED
+139 silly fetch manifest @types/webpack-env@https://registry.npm.taobao.org/@types/webpack-env/download/@types/webpack-env-1.14.1.tgz
+140 silly tarball no local data for @types/webpack-env@https://registry.npm.taobao.org/@types/webpack-env/download/@types/webpack-env-1.14.1.tgz. Extracting by manifest.
+141 http fetch GET https://registry.npm.taobao.org/@types/webpack-env/download/@types/webpack-env-1.14.1.tgz attempt 1 failed with CERT_HAS_EXPIRED
+142 http fetch GET https://registry.npm.taobao.org/@types/webpack-env/download/@types/webpack-env-1.14.1.tgz attempt 2 failed with CERT_HAS_EXPIRED
+143 http fetch GET https://registry.npm.taobao.org/@types/webpack-env/download/@types/webpack-env-1.14.1.tgz attempt 3 failed with CERT_HAS_EXPIRED
+144 silly fetch manifest @vue/cli-plugin-babel@https://registry.npm.taobao.org/@vue/cli-plugin-babel/download/@vue/cli-plugin-babel-3.12.1.tgz?cache=0&sync_timestamp=1574867941549&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fcli-plugin-babel%2Fdownload%2F%40vue%2Fcli-plugin-babel-3.12.1.tgz
+145 silly tarball no local data for @vue/cli-plugin-babel@https://registry.npm.taobao.org/@vue/cli-plugin-babel/download/@vue/cli-plugin-babel-3.12.1.tgz?cache=0&sync_timestamp=1574867941549&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fcli-plugin-babel%2Fdownload%2F%40vue%2Fcli-plugin-babel-3.12.1.tgz. Extracting by manifest.
+146 http fetch GET https://registry.npm.taobao.org/@vue/cli-plugin-babel/download/@vue/cli-plugin-babel-3.12.1.tgz?cache=0&sync_timestamp=1574867941549&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fcli-plugin-babel%2Fdownload%2F%40vue%2Fcli-plugin-babel-3.12.1.tgz attempt 1 failed with CERT_HAS_EXPIRED
+147 http fetch GET https://registry.npm.taobao.org/@vue/cli-plugin-babel/download/@vue/cli-plugin-babel-3.12.1.tgz?cache=0&sync_timestamp=1574867941549&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fcli-plugin-babel%2Fdownload%2F%40vue%2Fcli-plugin-babel-3.12.1.tgz attempt 2 failed with CERT_HAS_EXPIRED
